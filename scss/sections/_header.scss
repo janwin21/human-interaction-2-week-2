@@ -1,0 +1,9 @@
+// HEADER SECTION
+@use "../costumize" as *;
+
+.header {
+    height: fit-content;
+
+    .lead { font-size: 1.15em !important; }
+    @include media-breakpoint-down(lg) { img { display: none !important; } }
+}

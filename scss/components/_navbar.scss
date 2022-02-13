@@ -1,0 +1,67 @@
+// NAVBAR SECTION
+@use "../costumize" as *;
+@use "../components/mixins" as *;
+
+.navbar {
+    height: fit-content !important;
+
+    .nav-menu {
+        .btn {
+            color: $gray-400;
+            @include transition-to-all;
+            &:hover { color: $cyan !important; }
+            &:active { color: $white !important; }
+        }
+
+        .navbar-nav {
+            .close-1 { display: block; }
+            .close-2 { display: none !important; }
+            .li-menu { display: none !important; }
+
+            @include media-breakpoint-down(md) { padding-left: 1rem; }
+            @include media-breakpoint-down(sm) { 
+                flex-direction: column !important;
+                margin: 0 !important;
+                padding: 0 !important;
+
+                li { margin: 0 !important; padding: 0 !important; }
+                .close-1 { display: none; }
+                .close-2 { display: block !important; }
+                .li-menu { display: block !important; }
+                .li-bar { display: none; }
+            }
+
+            a{
+                @include media-breakpoint-down(md) { font-size: 1em !important; }
+                @include media-breakpoint-down(sm) { font-size: 0.9em !important; }
+            }
+        }
+    }
+
+    .nav-dropdown {
+        height: 200px !important;
+        overflow-y: hidden;
+        @include media-breakpoint-down(lg) { height: 180px !important; }
+        @include media-breakpoint-down(md) { height: 150px !important; }
+        @include media-breakpoint-down(sm) { height: 90px !important; }
+
+        img {
+            position: absolute;
+            top: 0; left: 0;
+        }
+        
+        .card-img-overlay {
+            position: absolute;
+            @include transition-to-all;
+
+            .btn-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                text-transform: uppercase; 
+                @include media-breakpoint-down(md) { padding: 0.5rem; }
+                @include media-breakpoint-down(sm) { font-size: 0.8em; padding: 0.25rem; }
+            }
+        }
+    }
+}

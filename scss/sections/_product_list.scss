@@ -1,0 +1,48 @@
+// PRODUCT LIST SECTION
+@use "../costumize" as *;
+@use "../components/mixins" as *;
+
+.product-list {
+    margin: auto !important;
+
+    .__image {
+        position: relative;
+        width: 250px !important;
+        height: 125px !important;
+        overflow-y: hidden;
+
+        img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    .description { width: 300px !important; }
+
+    .card-img-overlay {
+        label {
+            position: absolute;
+            bottom: 0; left: 0;
+            @include transition-to-all;
+            p { font-size: 0.9rem; }
+            &:hover { opacity: 0.75; }
+        }
+    }
+
+    .side {
+        @include media-breakpoint-down(md) { margin-top: 1rem !important; }
+
+        img {
+            width: 100% !important;
+            height: 250px !important;
+        }
+    }
+
+    @include media-breakpoint-down(md) { .md-screen { display: none !important; } }
+    @include media-breakpoint-down(sm) { .sm-screen { 
+        display: none !important; 
+        margin-left: -0.5rem !important;
+    } }
+}

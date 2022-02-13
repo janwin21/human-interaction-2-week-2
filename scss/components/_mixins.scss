@@ -1,0 +1,9 @@
+// MIXINS
+@use "../costumize" as *;
+
+// TEXT SHADOW
+// simple text shadow
+@mixin text-shadow-br { text-shadow: 1px 1px 3px $black; }
+
+// TRANSITION
+@mixin transition-to-all { transition: all 0.25s ease-out; }

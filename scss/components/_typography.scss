@@ -1,0 +1,48 @@
+// TYPOGRAHY
+@use "../costumize" as *;
+
+// BUTTON SECTION
+// all btn
+.btn { border-radius: 0; }
+
+// btn title
+.btn-title {
+    border: none;
+    background-color: transparent;
+}
+
+// dark btn
+.btn-dark { &:hover {
+        border-color: $gray-800;
+        background-color: $gray-800;
+}   }
+
+// CARD SECTION
+.card {
+    border: none;
+    border-radius: 0;
+
+    img { border-radius: 0; }
+
+    .card-img-overlay {
+        border: none;
+        border-radius: 0;
+    }
+}
+
+// DISPLAY
+.remove { display: none !important; }
+
+// OPACITY
+.dark-opaque { background-color: rgba($black, 0.75); }
+.opaque { background-color: rgba($black, 0.5); }
+.light-opaque { background-color: rgba($black, 0.25); }
+
+// INPUTS
+input[type=email], input[type=password], select, textarea {
+    border-radius: 0 !important;
+    border: 1px solid $black !important;
+}
+
+// COLOR
+.cyan { color: $cyan; }

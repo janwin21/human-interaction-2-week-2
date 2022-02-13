@@ -1,0 +1,14 @@
+// import costumize containing all bootstrap snippets
+@use "costumize";
+
+// import all files in the component folder
+@use "./components/mixins";
+@use "./components/typography";
+@use "./components/navbar";
+
+// import all files in the sections folder
+@use "./sections/title";
+@use "./sections/header";
+@use "./sections/product_list";
+@use "./sections/client";
+@use "./sections/history";

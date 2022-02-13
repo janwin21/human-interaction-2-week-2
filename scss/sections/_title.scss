@@ -1,0 +1,34 @@
+// TITLE SECTION
+@use "../costumize" as *;
+@use "../components/mixins" as *;
+
+.title {
+    position: relative;
+    overflow-y: hidden;
+    height: $title-height !important;
+
+    .card {
+        height: $title-height !important;
+
+        .card-img-overlay {
+            position: relative;
+            height: $title-height !important;
+
+            .title-header { 
+                @include text-shadow-br;
+                @include media-breakpoint-down(lg) { font-size: 1.75em; }
+                @include media-breakpoint-down(md) { font-size: 1em; }
+            }
+
+            .btn {
+                color: $gray-400;
+                margin: 0 1rem;
+                @include transition-to-all;
+                @include media-breakpoint-down(md) { font-size: 0.9em; margin: 0 0.5rem; }
+                @include media-breakpoint-down(sm) { font-size: 0.8em; margin: 0 0.25rem; }
+                &:hover { color: $cyan !important; }
+                &:active { color: $white !important; }
+            }
+        }
+    }
+}
